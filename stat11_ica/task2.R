@@ -1,8 +1,6 @@
 library("tseries")
 library("zoo")
 
-library(PerformanceAnalytics)
-
 #Log (continuously compounded) Returns for S&P500 and FTSE100
 priceSP = get.hist.quote(instrument="^gspc", start = "2010-03-09", end = "2020-12-15", quote="AdjClose")
 y_sp=diff(log(priceSP))
